@@ -1,0 +1,16 @@
+<h4>Il reste <span class="count">{{ comments.length }}</span> commentaires à valider</h4>
+<mat-list [@list]="comments?.length">
+  <mat-list-item *ngFor="let comment of comments.slice(0, 25)">
+    <img matListAvatar src="../../assets/img/melanie-laurent.jpg" alt="profile picture">
+    <h5 mat-line><b>{{ comment.UserName }}</b> le 02/12/2017 à 16h20</h5>
+    <p mat-line> {{ comment.Content }} </p>
+    <button mat-icon-button class="remove-button" (click)="removeOneComment(comment)">
+      <mat-icon aria-label="Remove this comment">delete</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-list>
+<div *ngIf="thanksState == 'thanksState'" class="thanks" [@thanks]="thanksState">
+  <mat-icon>favorite</mat-icon>
+  <span>Merci, il n'y a plus aucun commentaire à valider</span>
+</div>
+<button mat-raised-button (click)="validateComments()" [disabled]="!comments.length > 0">Valider les 25 commentaires</button>

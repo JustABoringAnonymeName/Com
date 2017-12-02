@@ -1,0 +1,32 @@
+mat-list {
+  padding: 0px 10px;
+}
+
+.remove-button {
+  border-radius: 50%;
+  border: 1px solid #6adec8;
+  color: #6adec8;
+}
+
+button {
+  display: table;
+  margin: 40px auto;
+}
+
+.thanks {
+  text-align: center;
+  width: 21%;
+  padding: 20px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #2C3742;
+
+  span {
+    vertical-align: super;
+  }
+
+  mat-icon {
+    color: #3F8342;
+    padding-right: 10px;
+  }
+}
